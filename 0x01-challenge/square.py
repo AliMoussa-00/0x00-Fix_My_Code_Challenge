@@ -2,21 +2,21 @@
 """a module to define the square"""
 
 
-class Square():
+class Square:
     """Defining the square class"""
 
     def __init__(self, width=0, height=0):
         """Initializing the object"""
 
-        self.width = width
-        self.height = height
+        self.width = width if width > 0 else 0
+        self.height = height if height > 0 else 0
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """Area of the square"""
         return self.height * self.width
 
     def perimeter_of_my_square(self):
-        """ Perimeter of the square """
+        """Perimeter of the square"""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
