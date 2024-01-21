@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170124184440) do
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "online", default: true
   end
 
   create_table "users", force: :cascade do |t|
