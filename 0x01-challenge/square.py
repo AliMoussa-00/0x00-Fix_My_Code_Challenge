@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""a module to define the square class"""
+"""a module to define the square"""
 
 
-class square():
+class Square():
     """Defining the square class"""
 
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
+        """Initializing the object"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -16,10 +17,12 @@ class square():
         """ Area of the square """
         return self.height * self.width
 
-    def PermiterOfMySquare(self):
+    def permiterOfMySquare(self):
+        """ Perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """String definition of the class"""
         return "{}/{}".format(self.width, self.height)
 
 
